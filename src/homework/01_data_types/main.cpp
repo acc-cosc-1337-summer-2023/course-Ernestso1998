@@ -10,9 +10,9 @@ int main()
 	int num;
 	cin >> num;
 	
-	int result 
+	int result;
 	
-	multiply_numbers (int num)
+	multiply_numbers (num);
 
-	return 0;
+	return result;
 }
