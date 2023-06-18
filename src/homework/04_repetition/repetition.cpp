@@ -24,27 +24,3 @@ float get_gc_content (const std::string& gc_str){
     return gc_percent;
     }
        
-int get_reverse_string (){
-
-
-
-
-
-
-        return 0;
-    }
-    
-    
-    
-    
-    
-int get_dna_complement  (){
-
-
-
-
-
-
-
-    return 0;
-    }
