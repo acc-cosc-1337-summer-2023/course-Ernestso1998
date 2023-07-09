@@ -25,13 +25,18 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
-		}
 
-		cout<<"Play again, enter y or Y? ";
+			
+			
+		}
+		
+		cout<<"The winner is "<< game.get_winner() << "\n";
+		
+		cout<<"To play again, enter y or Y. To exit, enter n or N: ";
 		cin>>user_choice; 
 
 
-	}while(user_choice == 'y' || user_choice == 'Y');
+	}while(user_choice == 'y' || user_choice == 'Y' || user_choice == 'n' || user_choice == 'N');
 
 
 	return 0;
