@@ -36,7 +36,7 @@ int main()
 		cin>>user_choice; 
 
 
-	}while(user_choice == 'y' || user_choice == 'Y' || user_choice == 'n' || user_choice == 'N');
+	}while(user_choice == 'y' || user_choice == 'Y');
 
 
 	return 0;
