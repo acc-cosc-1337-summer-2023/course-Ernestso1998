@@ -6,6 +6,7 @@
 
 using std::cout; using std::cin;
 using std::unique_ptr; using std::make_unique;
+
 int main() 
 {
 	unique_ptr<TicTacToe> game;
@@ -20,7 +21,15 @@ int main()
 		cout<<"Please enter either 3 or 4 to start: ";
 		cin>>game_type;
 
-	
+		if(game_type == 3)
+		{
+			game = make_unique<TicTacToe3>();
+		}
+		else
+		{
+			
+			game = make_unique<TicTacToe4>();
+		}
 
 		cout<<"Enter first player: ";
 		cin>>first_player;

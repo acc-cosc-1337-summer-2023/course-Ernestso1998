@@ -16,13 +16,14 @@ public:
     std::string get_player() const {return player;}
     void display_board() const;
     std::string get_winner() {return winner;}
+
+    std::vector<std::unique_ptr<TicTacToe>> game;
 protected:
     std::vector<std::string> pegs;
     virtual bool check_column_win();
     virtual bool check_row_win();
     virtual bool check_diagonal_win();
 private:
-    std::vector<std::unique_ptr<TicTacToe>> game;
     std::string player;
     void clear_board();
     bool check_board_full();
