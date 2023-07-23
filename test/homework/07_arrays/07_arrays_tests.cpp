@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "arrays.h"
+#include "arrays.cpp"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -113,7 +114,7 @@ const int SIZE = 5;
 	REQUIRE(value == -1);
 }
 
-TEST_CASE("Test get value at index w 654")
+TEST_CASE("Test delete value 5 ")
 {
 const int SIZE = 5;
 	int list[SIZE];
@@ -126,7 +127,12 @@ const int SIZE = 5;
 	array_list.Add(15);
 	array_list.Add(20);
 	array_list.Delete(5);
+	REQUIRE(array_list.Size() == (SIZE - 1));
+	REQUIRE(array_list.Get_Value_At_Index(0) == 7);
+	REQUIRE(array_list.Get_Value_At_Index(1) == 10);
+	REQUIRE(array_list.Get_Value_At_Index(2) == 15);
+	REQUIRE(array_list.Get_Value_At_Index(3) == 20);
 
-	int value = array_list.Get_Value_At_Index(5);
-	REQUIRE(value == -1);
+
+
 }

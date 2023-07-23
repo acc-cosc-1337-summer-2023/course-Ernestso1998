@@ -53,15 +53,16 @@ void ArrayList::Delete(int value)
 
     if(index != -1)
     {
-        AdjustElements(value);
+        AdjustElements(index);
     }
 }
 
 void ArrayList::AdjustElements(int index)
 {
-    for (int i = current_index; i < capacity; i++)
+    for (int i = index; i < current_index; i++)
     {
-        elements[i] = elements[i-1];
+        elements[i] = elements[i+1];
+     
     }
-    
+       current_index--;
 }
